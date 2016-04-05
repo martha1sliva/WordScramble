@@ -23,27 +23,24 @@ def jumble(word):
 
 def play(word,jumble):
     print "The jumble is: ", jumble
-##says what the jumbled version is
+##prints jumbled version
 
-#getting the player's guess
+##getting the player's guess
 
     guess = raw_input("\nYour guess: ")
     guess = guess.lower()
-    while (guess != word) and (guess != ""):  
-        if guess == "hint":   ##provides a hint
-            print "The word begins with: " + str(hint) + "."
+    while (guess != word):  
+        if guess == "hint":
+            ##provides a hint
+            print "The word begins with: " + word[0] + "."
             guess = raw_input("Your guess: ")
             guess = guess.lower()
-            if guess == word:
-                print "That's it! You guessed it! \n"
         else:
             print "Sorry, that's not it."
             guess = raw_input("Your guess: ")
             guess = guess.lower()
-            if guess == word:
-                print "That's it! You guessed it! \n"
-
-    print "Thanks for playing."
+            
+    print "That's it! You guessed it! \n\nThanks for playing."
 
 ##putting the functions together
 def main():
